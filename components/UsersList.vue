@@ -21,7 +21,7 @@ import { useAsyncData } from 'nuxt/app';
 const search = ref('');
 
 const filteredUsers = computed(() =>
-  users
+  users.value
     ? users.value.filter((user) =>
         user.name.toLowerCase().includes(search.value.toLowerCase())
       )
